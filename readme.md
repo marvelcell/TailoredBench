@@ -120,16 +120,16 @@ python main.py \
 
 #### 3. Main Parameters
 
-| Parameter                     | Description                                                |
-| ----------------------------- | ---------------------------------------------------------- |
-| `--dataset`                   | Dataset name to evaluate (e.g., gsm8k, Hellaswag)          |
-| `--results_dir`               | Experiment results output directory                        |
-| `--point_counts`              | Number of N-set size excluding G-set size                  |
-| `--num_cc_set`                | Number of K-Medoids clusters when constructing G-set       |
-| `--distance`                  | Distance metric used for clustering (default: `manhattan`) |
-| `--num_runs`                  | Number of repeated runs per setting                        |
-| `--num_dynamic_source_models` | Number of local source models per target model             |
-| `--num_processes`             | Number of parallel processes (recommended: CPU core count) |
+| Parameter                     | Description                                                   |
+| ----------------------------- | ----------------------------------------------------------    |
+| `--dataset`                   | Dataset name to evaluate (e.g., gsm8k, Hellaswag)             |
+| `--results_dir`               | Experiment results output directory                           |
+| `--point_counts`              | Number of N-set size **excluding** G-set size **(!!! Very Very Important !!!)** point_counts + num_cc_set(G-set) = N-set|
+| `--num_cc_set`                | Number of K-Medoids clusters when constructing G-set          |
+| `--distance`                  | Distance metric used for clustering (default: `manhattan`)    |
+| `--num_runs`                  | Number of repeated runs per setting                           |
+| `--num_dynamic_source_models` | Number of local source models per target model                |
+| `--num_processes`             | Number of parallel processes (recommended: CPU core count)    |
 
 ------
 

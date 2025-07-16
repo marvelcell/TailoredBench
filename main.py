@@ -16,7 +16,7 @@ def main():
     parser.add_argument("--num_source_models", type=int, default=69)
     parser.add_argument("--num_dynamic_source_models", type=int, default=20)
     parser.add_argument("--num_runs", type=int, default=100)
-    parser.add_argument("--point_counts", type=int, nargs='+', default=[10,15,20,25,30])
+    parser.add_argument("--point_counts", type=int, nargs='+', default=[10,15,20,25,30])    # Number of N-set size **excluding** G-set size **(!!! Very Very Important !!!)** point_counts + num_cc_set(G-set) = N-set 
     parser.add_argument("--exp", type=str, default="score_cc_set")
     parser.add_argument("--num_cc_set", type=int, default=10)
     parser.add_argument("--num_processes", type=int, default=24)
