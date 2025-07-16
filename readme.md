@@ -1,6 +1,6 @@
 ## TailoredBench
 
-This project implements the TAILOREDBENCH method proposed in the paper "Beyond One-Size-Fits-All: Tailored Benchmarks for Efficient Evaluation" for efficient estimation of target model performance on complete benchmark datasets under limited inference budgets. The core idea is to construct globally representative core sets adapted to source models, adaptively select local source models based on prediction consistency between target and source models, and combine scalable K-Medoids clustering with calibrated estimation strategies to achieve customized performance prediction.
+This project implements the TAILOREDBENCH method proposed in the paper "Beyond One-Size-Fits-All: Tailored Benchmarks for Efficient Evaluation" **(ACL 2025 MAIN)** for efficient estimation of target model performance on complete benchmark datasets under limited inference budgets. The core idea is to construct globally representative core sets adapted to source models, adaptively select local source models based on prediction consistency between target and source models, and combine scalable K-Medoids clustering with calibrated estimation strategies to achieve customized performance prediction.
 
 ### Project Structure
 
