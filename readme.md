@@ -113,7 +113,7 @@ python main.py \
     --point_counts 20 \
     --num_cc_set 10 \
     --distance manhattan \
-    --num_runs 3 \
+    --num_runs 100 \
     --num_processes 24
 ```
 
@@ -123,7 +123,7 @@ python main.py \
 | ----------------------------- | ----------------------------------------------------------    |
 | `--dataset`                   | Dataset name to evaluate (e.g., gsm8k, Hellaswag)             |
 | `--results_dir`               | Experiment results output directory                           |
-| `--point_counts`              | Number of N-set size **excluding** G-set size **(!!! Very Very Important !!!)**  **point_counts + num_cc_set(G-set) = N-set**|
+| `--point_counts`              | Number of N-set size **excluding** G-set size **(!!! Very Very Important !!!)**<span> &nbsp; &nbsp; &nbsp; </span>**point_counts + num_cc_set(G-set) = N-set**|
 | `--num_cc_set`                | Number of K-Medoids clusters when constructing G-set          |
 | `--distance`                  | Distance metric used for clustering (default: `manhattan`)    |
 | `--num_runs`                  | Number of repeated runs per setting                           |
