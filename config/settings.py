@@ -41,7 +41,6 @@ DATASETS = {
 # Model configurations
 MODEL_CONFIG = {
     'num_source_models': 69,     
-    'num_dynamic_source_models': 20,    
     'max_dataset_size': 6000,
     'max_samples': 6000
 }
@@ -186,7 +185,6 @@ DEFAULT_ARGS = {
     'datasets_to_run': ['gsm8k'],
     'max_dataset_size': 6000,
     'num_source_models': 69,
-    'num_dynamic_source_models': 20,
     'num_runs': 100,
     'point_counts': [20],
     'exp': 'score_cc_set',

@@ -71,7 +71,7 @@ def score_cc_set_experiment(args):
         for num_medoids in tqdm(args.point_counts):
             print(f"Running experiment with num_medoids: {num_medoids}")
             all_val_correlations, all_estimated_scores = score_dynamic_source_models_selection(
-                source_models_golddata, target_models_golddata,source_all_data,target_all_data,args.num_dynamic_source_models, num_medoids, true_scores, args, ds
+                source_models_golddata, target_models_golddata,source_all_data,target_all_data, num_medoids, true_scores, args, ds
             )
             # Compute and save results
             estimate_score_savepath = f'./AnchorPoints/{args.datasets_to_run[0]}_result/clusterunionset_quantile'
@@ -96,8 +96,7 @@ def score_cc_set_experiment(args):
             with open(result_save_path, 'a') as file:
                 file.write(result + '\n')
 
-def score_dynamic_source_models_selection(source_models_golddata, target_models_golddata,source_all_data, target_all_data,
-                                        num_dynamic_source_models, num_dynamic_anchor_points,
+def score_dynamic_source_models_selection(source_models_golddata, target_models_golddata,source_all_data, target_all_data, num_dynamic_anchor_points,
                                         true_scores, args, dataset_name):
     """
     Perform dynamic source model selection and target model score prediction.
@@ -107,7 +106,6 @@ def score_dynamic_source_models_selection(source_models_golddata, target_models_
         target_models_golddata: Target model accuracy data (n_models x n_examples)
         source_all_data: Full source model prediction data (n_models x n_examples x n_classes)
         target_all_data: Full target model prediction data (n_models x n_examples x n_classes)
-        num_dynamic_source_models: Number of source models per target
         num_dynamic_anchor_points: Number of clustering anchor points
         true_scores: Ground truth performance scores for target models
         args: Configuration parameters object
